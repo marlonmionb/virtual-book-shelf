@@ -9,7 +9,7 @@ interface SearchProps {
 const Search: FC<SearchProps> = ({input, placeholder, onChangeInputData}) => {
     const [inputData, setInputData] = useState(input || '');
 
-    function onInputChange(e: ChangeEvent<HTMLInputElement>) {
+    const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         e.preventDefault();
         setInputData(e.target.value);
         onChangeInputData ? onChangeInputData(e.target.value): null;
