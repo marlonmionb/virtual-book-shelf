@@ -1,9 +1,16 @@
+import { Fragment } from "react/jsx-runtime"
+import Button from "./components/Button/Button"
+
 function App() {
 
+const consoleLog = () => {
+  console.log('The button has created ')
+}
+
   return (
-    <div>
-      <h1 className="font-bold underline">tesssst</h1>
-    </div>
+    <Fragment>
+        <Button onClick={consoleLog}>+ New Book</Button>
+    </Fragment>
   )
 }
 
