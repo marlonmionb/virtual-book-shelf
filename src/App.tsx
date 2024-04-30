@@ -4,7 +4,7 @@ import Button from "./components/Button/Button"
 function App() {
 
 const consoleLog = () => {
-  console.log('The button has created ')
+  console.log('The button has being created ')
 }
 
   return (
