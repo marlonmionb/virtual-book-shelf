@@ -1,11 +1,7 @@
-import { Fragment } from "react/jsx-runtime"
+import { Fragment } from "react/jsx-runtime";
 
 function App() {
-
-  return (
-    <Fragment>
-    </Fragment>
-  )
+  return <Fragment></Fragment>;
 }
 
-export default App
+export default App;
