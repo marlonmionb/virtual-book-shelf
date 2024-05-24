@@ -23,7 +23,7 @@ const Rating: React.FC<RatingProps> = ({ totalStars = 5, onRatingChange }) => {
         return (
           <span
             key={index}
-            className={`cursor-pointer text-2xl transition-colors duration-200 ${
+            className={`cursor-pointer text-2xl ${
               ratingValue <= (hover || rating)
                 ? "text-yellow-400"
                 : "text-gray-400"
