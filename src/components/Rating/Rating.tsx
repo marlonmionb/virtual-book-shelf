@@ -17,23 +17,26 @@ const Rating: React.FC<RatingProps> = ({ totalStars = 5, onRatingChange }) => {
   };
 
   return (
-    <div className="flex ml-1 space-x-1">
-      {[...Array(totalStars)].map((_, index) => {
-        const ratingValue = index + 1;
-        return (
-          <span
-            key={index}
-            className={`cursor-pointer text-2xl ${
-              ratingValue <= (hover || rating)
-                ? "text-yellow-400"
-                : "text-gray-400"
-            }`}
-            onClick={() => handleClick(ratingValue)}
-          >
-            &#9733;
-          </span>
-        );
-      })}
+    <div>
+      <h2 className="font-semibold ml-2 text-xl">Rating</h2>
+      <div className="flex ml-1 space-x-1">
+        {[...Array(totalStars)].map((_, index) => {
+          const ratingValue = index + 1;
+          return (
+            <span
+              key={index}
+              className={`cursor-pointer text-2xl ${
+                ratingValue <= (hover || rating)
+                  ? "text-yellow-400"
+                  : "text-gray-400"
+              }`}
+              onClick={() => handleClick(ratingValue)}
+            >
+              &#9733;
+            </span>
+          );
+        })}
+      </div>
     </div>
   );
 };
