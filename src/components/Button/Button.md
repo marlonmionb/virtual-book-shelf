@@ -2,14 +2,13 @@
 
 ## Properties
 
-| Property | Type                           | Default   | Description                                 |
-| -------- | ------------------------------ | --------- | --------------------------------------------|
-| onClick  | () => void                     | --------- | Function called when the button is clicked. |
-| type     | "submit"  | "reset"  | "button"| "button"  | Specifies the type of button.               |
-| children | ReactNode                      | undefined | Content to be displayed inside the button.  |
+Property       | Type                     | Default   | Description                                                         
+-------------- | -------------------------| --------- | -------------------------------------------------------------------
+totalStars     | number                   | 5         | Specifies the total number of stars to be displayed.                
+onRatingChange | (rating: number) => void | undefined | Function called when the rating is changed.                         
 
 ## Events
 
-| Event          | Returns | Description                            |
-| -------------- | ------- | -------------------------------------- |
-| onClick        | ------- | Triggered when the button is clicked.  |
+Event          | Returns | Description                                
+-------------- | ------- | -------------------------------------------
+onRatingChange | number  | Triggered when the user selects a rating. 
