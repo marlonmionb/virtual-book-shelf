@@ -1,13 +1,15 @@
-import React, { ReactNode } from "react";
+import UserBar from "../UserBar/UserBar";
 
-interface NavBarProps {
-  children?: ReactNode;
-}
+const NavBar = () => {
+  const userImage = "./src/assets/gato.png"
+  const logo = "./src/assets/logo.png"
 
-const NavBar: React.FC<NavBarProps> = ({ children }) => {
   return (
     <div>
-      <nav className="bg-gray-800 flex justify-between px-2">{children}</nav>
+      <nav className="flex justify-between">
+        <img className="h-14 w-14" src={logo}/>
+        <UserBar path={userImage} className="flex justify-items-end"/>
+      </nav>
     </div>
   );
 };
