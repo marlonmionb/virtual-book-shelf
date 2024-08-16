@@ -9,8 +9,8 @@ interface CategoryProps {
 }
 
 const Category: FC<CategoryProps> = ({ id, value, color, editable = false, onDelete }) => (
-    <div id={id} className="px-4 py-1 mx-2 my-1 rounded-md" style={{ backgroundColor: color }}>
-        <span style={{ backgroundColor: color }}>{value}</span>
+    <div id={id} className="px-2 m-1 py-1 rounded-md flex items-center" style={{ backgroundColor: color }}>
+        <span className="text-xs" style={{ backgroundColor: color }}>{value}</span>
         {editable && <button data-testid={`delete-button-${id}`} className="ms-4" onClick={onDelete}>x</button>}
     </div>
 );
@@ -75,7 +75,7 @@ const Categories: FC<CategoriesProps> = ({ tags, editable = false, onUpdateCateg
     }, [categorieTags, createNewTag, onUpdateCategories]);
 
     return (
-        <div className="my-4 ms-2 flex flex-row flex-wrap">
+        <div className="my-4 flex flex-row flex-wrap">
             {editable && (
                 editMode ? (
                     <input
