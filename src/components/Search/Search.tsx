@@ -25,12 +25,12 @@ const Search: FC<SearchProps> = ({input, placeholder, onChangeInputData}) => {
                 className="
                     focus:outline-none 
                     rounded-lg 
-                    bg-gray-100
-                    text-gray-500 
-                    placeholder-gray-500 
-                    my-4 mx-4 
+                    bg-gray-200
+                    text-gray-400 
+                    placeholder-gray-600 
+                    my-4 
                     py-1 ps-4
-                    w-1/5
+                    w-full
                     h-10
                 "
             />
